@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DeliveryOtomatizer.Configuration;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +13,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DeliveryOtomatizer
 {
@@ -20,8 +21,14 @@ namespace DeliveryOtomatizer
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static ConfigLoader _configLoader;
+        private static ConfigSoft _configSoft;
+
         public MainWindow()
         {
+            _configLoader = new ConfigLoader();
+            _configSoft = _configLoader.LoadConfigSoftware(Path.Combine(Directory.GetCurrentDirectory(), "config.xml"));
+
             InitializeComponent();
         }
     }
