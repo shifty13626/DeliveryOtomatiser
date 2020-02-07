@@ -4,5 +4,10 @@
     <name></name>
     <version></version>
   </Soft>
-  <Sonar></Sonar>
+  <Sonar>
+    <username></username>
+    <password></password>
+    <address></address>
+    <port></port>
+  </Sonar>
 </Config>

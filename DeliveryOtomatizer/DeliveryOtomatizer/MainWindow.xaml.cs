@@ -21,13 +21,16 @@ namespace DeliveryOtomatizer
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static ConfigLoader _configLoader;
-        private static ConfigSoft _configSoft;
+        private ConfigLoader configLoader;
+        private ConfigSoft configSoft;
+        private configSonar configSonar;
 
         public MainWindow()
         {
-            _configLoader = new ConfigLoader();
-            _configSoft = _configLoader.LoadConfigSoftware(Path.Combine(Directory.GetCurrentDirectory(), "config.xml"));
+            var pathConfig = Path.Combine(Directory.GetCurrentDirectory(), "config.xml");
+            configLoader = new ConfigLoader();
+            configSoft = configLoader.LoadConfigSoftware(pathConfig);
+            configSonar = configLoader.LoadConfigSonar(pathConfig);
 
             InitializeComponent();
         }
