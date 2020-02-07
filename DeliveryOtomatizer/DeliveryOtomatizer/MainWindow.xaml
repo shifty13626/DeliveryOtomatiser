@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DeliveryOtomatizer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="DeliveryOptimizer" Height="500" Width="1050">
     <Grid>
+        <GroupBox x:Name="GroupBoxSoft" Header="Information Soft" Margin="16,20,701,386">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label x:Name="LabelVersionSoft" Content="Version sofware :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="0" AutomationProperties.AutomationId="LabelVersionSoft"/>
+                <TextBox x:Name="TextBoxVersionSoft" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,0" Height="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" AutomationProperties.AutomationId="TextVersionSoft" Padding="0,0,0,0"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="GroupBoxSonar" Header="SonarQube" Margin="16,170,701,203" RenderTransformOrigin="0.467,0.494" AutomationProperties.AutomationId="GroupBoxSonarQube">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label x:Name="LabelSonarAnalyse" Content="Sonar analyse :" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" AutomationProperties.AutomationId="LabelSonarAnalyse"/>
+                <CheckBox Content="Launch sonar analyse" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label x:Name="LabelUserNameSonar" Content="Username :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="1" AutomationProperties.AutomationId="LabelUsernameSonar"/>
+                <TextBox x:Name="TextBoxUsernameSonar" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="0,0,0,0" Height="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" AutomationProperties.AutomationId="TextBoxUsernameSonar" Padding="0,0,0,0"/>
+                <Label x:Name="LabelPasswordSonar" Content="Password :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="2" AutomationProperties.AutomationId="LabelUsernameSonar"/>
+                <PasswordBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="0,0,0,0"  VerticalAlignment="Center" Width="150" Height="20"/>
 
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
