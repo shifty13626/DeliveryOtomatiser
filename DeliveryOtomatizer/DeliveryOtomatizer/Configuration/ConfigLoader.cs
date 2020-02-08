@@ -16,6 +16,7 @@ namespace DeliveryOtomatizer.Configuration
 
         private const string NODE_NAME = "name";
         private const string NODE_VERSION = "version";
+        private const string NODE_TYPE = "type";
 
         private const string NODE_USERNAME_SONAR = "username";
         private const string NODE_PASSWORD_SONAR = "password";
@@ -41,7 +42,8 @@ namespace DeliveryOtomatizer.Configuration
             var config = new ConfigSoft()
             {
                 Name = root.Element(NODE_SOFT).Element(NODE_NAME).Value,
-                Version = root.Element(NODE_SOFT).Element(NODE_VERSION).Value
+                Version = root.Element(NODE_SOFT).Element(NODE_VERSION).Value,
+                Type = root.Element(NODE_SOFT).Element(NODE_TYPE).Value
             };
 
             /*
