@@ -1,4 +1,5 @@
 ﻿using DeliveryOtomatizer.Configuration;
+using DeliveryOtomatizer.Enums;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,7 +33,13 @@ namespace DeliveryOtomatizer
             configSoft = configLoader.LoadConfigSoftware(pathConfig);
             configSonar = configLoader.LoadConfigSonar(pathConfig);
 
+            ComboBoxTypeSoft = new ComboBox();
+
             InitializeComponent();
+
+            foreach (var element in Enum.GetValues(typeof(TypeSoft)))
+                ComboBoxTypeSoft.Items.Add(element);
+            ComboBoxTypeSoft.SelectedIndex = 0;
         }
     }
 }

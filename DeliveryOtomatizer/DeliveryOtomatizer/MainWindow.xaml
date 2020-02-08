@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="DeliveryOptimizer" Height="500" Width="1050">
     <Grid>
-        <GroupBox x:Name="GroupBoxSoft" Header="Information Soft" Margin="16,20,701,386">
+        <GroupBox x:Name="GroupBoxSoft" Header="Information Soft" Margin="16,20,701,336">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -15,9 +15,15 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Label x:Name="LabelVersionSoft" Content="Version sofware :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="0" AutomationProperties.AutomationId="LabelVersionSoft"/>
-                <TextBox x:Name="TextBoxVersionSoft" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,0" Height="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" AutomationProperties.AutomationId="TextVersionSoft" Padding="0,0,0,0"/>
+                <Label x:Name="LabelVersionName" Content="Name sofware :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="0" AutomationProperties.AutomationId="LabelNameSoft"/>
+                <TextBox x:Name="TextBoxNameSoft" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,0" Height="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" AutomationProperties.AutomationId="TextNameSoft" Padding="0,0,0,0"/>
+                <Label x:Name="LabelVersionSoft" Content="Version sofware :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="1" AutomationProperties.AutomationId="LabelVersionSoft"/>
+                <TextBox x:Name="TextBoxVersionSoft" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="0,0,0,0" Height="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" AutomationProperties.AutomationId="TextVersionSoft" Padding="0,0,0,0"/>
+                <Label x:Name="LabelVersionType" Content="Type sofware :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="2" AutomationProperties.AutomationId="LabelTypeSoft"/>
+                <ComboBox x:Name="ComboBoxTypeSoft" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Column="1" Grid.Row="2" Height="19" VerticalAlignment="Center" Width="150"/>
             </Grid>
         </GroupBox>
         <GroupBox x:Name="GroupBoxSonar" Header="SonarQube" Margin="16,170,701,203" RenderTransformOrigin="0.467,0.494" AutomationProperties.AutomationId="GroupBoxSonarQube">
