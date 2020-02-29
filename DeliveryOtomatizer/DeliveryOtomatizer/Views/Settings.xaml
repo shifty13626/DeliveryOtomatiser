@@ -1,0 +1,52 @@
+﻿<Window x:Class="DeliveryOtomatizer.Views.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DeliveryOtomatizer.Views"
+        mc:Ignorable="d"
+        Title="Settings" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Sonar params -->
+        <GroupBox x:Name="GroupBoxSonar" Header="Sonar Information" Grid.Column="0" VerticalAlignment="Center" Height="197">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label x:Name="LabelServerSonarAddress" Content="Sonar address :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="0" AutomationProperties.AutomationId="LabelServerSonarAddress"/>
+                <TextBox x:Name="TextBoxNameServerSonarAddress" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,0" Height="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" AutomationProperties.AutomationId="TextNameServerSonarAddress" Padding="0,0,0,0"/>
+            </Grid>
+        </GroupBox>
+
+        <!-- Nexus params -->
+        <GroupBox x:Name="GroupBoxNexus" Header="Nexus Information" Grid.Column="1" VerticalAlignment="Top" Height="197">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label x:Name="LabelServerNexusAddress" Content="Nexus address :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="0" AutomationProperties.AutomationId="LabelServerNexusAddress"/>
+                <TextBox x:Name="TextBoxNameServerNexusAddress" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,0" Height="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" AutomationProperties.AutomationId="TextNameServerNexusAddress" Padding="0,0,0,0"/>
+            </Grid>
+        </GroupBox>
+
+        <Button x:Name="btnSave" Content="Save settings" HorizontalAlignment="Left" Margin="182,68,0,0" Grid.Row="1" VerticalAlignment="Top" Click="BtnSave_Click"/>
+    </Grid>
+</Window>

@@ -1,14 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Config>
   <Soft>
-    <name></name>
-    <version></version>
-    <type></type>
+    <name>tototest</name>
+    <version>1.0.0</version>
+    <type>Net core</type>
+    <language>c#</language>
   </Soft>
   <Sonar>
-    <username></username>
-    <password></password>
-    <address></address>
-    <port></port>
+    <username>lha</username>
+    <password>lha</password>
+    <address>127.0.0.1:9000</address>
   </Sonar>
+  <Nexus>
+    <address>127.0.0.1:9000</address>
+    <username>lha</username>
+    <password>lha</password>
+  </Nexus>
 </Config>
