@@ -35,9 +35,9 @@
                 <Label x:Name="LabelVersionSoft" Content="Version sofware :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="1" AutomationProperties.AutomationId="LabelVersionSoft"/>
                 <TextBox x:Name="TextBoxVersionSoft" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="0,0,0,0" Height="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" AutomationProperties.AutomationId="TextVersionSoft" Padding="0,0,0,0"/>
                 <Label x:Name="LabelVersionType" Content="Type sofware :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="2" AutomationProperties.AutomationId="LabelTypeSoft"/>
-                <ComboBox x:Name="ComboBoxTypeSoft" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Column="1" Grid.Row="2" Height="19" VerticalAlignment="Center" Width="150"/>
+                <ComboBox x:Name="ComboBoxTypeSoft" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Height="35" VerticalAlignment="Center" Width="149"/>
                 <Label x:Name="LabelLanguageType" Content="Language of sofware :" HorizontalAlignment="Left" Margin="0,1,0,0" Height="26" Grid.Column="0" Grid.Row="3" AutomationProperties.AutomationId="LabelLanguageSoft"/>
-                <ComboBox x:Name="ComboBoxLanguageSoft" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Column="1" Grid.Row="3" Height="19" VerticalAlignment="Center" Width="150"/>
+                <ComboBox x:Name="ComboBoxLanguageSoft" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3" Height="35" VerticalAlignment="Center" Width="149"/>
             </Grid>
         </GroupBox>
 

@@ -3,7 +3,6 @@ using DeliveryOtomatizer.Managers;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace DeliveryOtomatizer.Controller
 {
@@ -13,7 +12,7 @@ namespace DeliveryOtomatizer.Controller
     public class ActionManager
     {
         private static ConfigLoader configLoader;
-        private ConfigSaver configSaver;
+        private readonly ConfigSaver configSaver;
         private static ConfigSoft configSoft;
         private static ConfigSonar configSonar;
         private static ConfigNexus configNexus;
@@ -53,6 +52,10 @@ namespace DeliveryOtomatizer.Controller
             configSaver.SaveAddressSonar(address);
         }
 
+        /// <summary>
+        /// To save new address of Nexus server
+        /// </summary>
+        /// <param name="address"></param>
         public void SaveAddressNexus(string address)
         {
             configSaver.SaveAddressNexus(address);
@@ -172,12 +175,43 @@ namespace DeliveryOtomatizer.Controller
 
         #region - Sonar Actions -
 
+        /// <summary>
+        /// Function manager to launch a Sonar analyse
+        /// </summary>
+        /// <returns></returns>
+        public bool LaunchSonarAnalyse()
+        {
+            // check project exist
+            if (!CheckSonarProjectExist())
+            {
+                // connect to Sonar server
+                sonarManager.ConnectOnSonar(configSonar.Username, configSonar.Password);
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Method to check if project already exist in this Sonar server
+        /// </summary>
+        /// <returns></returns>
         public bool CheckSonarProjectExist()
         {
             if (!sonarManager.OpenSonar(configSonar.Address))
                 return false;
 
-            return true;
+            List<string> allProjects = sonarManager.GetAllProject();
+            foreach(var element in allProjects)
+            {
+                if (element.Equals(configSoft.Name))
+                {
+                    //_log.Info("Project already exist.");
+                    return true;
+                }
+            }
+
+            //_log.Info("Project not exist on Sonar");
+            return false;
         }
 
         #endregion

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
 using System.Xml.Linq;
 
 namespace DeliveryOtomatizer.Configuration
@@ -11,7 +8,7 @@ namespace DeliveryOtomatizer.Configuration
     /// </summary>
     public class ConfigLoader
     {
-        #region Tag label cong
+        #region Tag label config
 
         private const string NODE_CONFIG = "Config";
         private const string NODE_SOFT = "Soft";
@@ -96,7 +93,11 @@ namespace DeliveryOtomatizer.Configuration
             return config;
         }
 
-
+        /// <summary>
+        /// To load configuration of Nexus
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         public ConfigNexus LoadConfigNexus(string url)
         {
             var doc = XDocument.Load(url);
@@ -107,11 +108,11 @@ namespace DeliveryOtomatizer.Configuration
                 return null;
             }
 
-            var config = new ConfigSonar()
+            var config = new ConfigNexus()
             {
-                Username = root.Element(NODE_SONAR).Element(NODE_USERNAME_SONAR).Value,
-                Password = root.Element(NODE_SONAR).Element(NODE_PASSWORD_SONAR).Value,
-                Address = root.Element(NODE_SONAR).Element(NODE_ADDRESS_SONAR).Value
+                Username = root.Element(NODE_NEXUS).Element(NODE_USERNAME_NEXUS).Value,
+                Password = root.Element(NODE_NEXUS).Element(NODE_PASSWORD_NEXUS).Value,
+                Address = root.Element(NODE_NEXUS).Element(NODE_ADDRESS_NEXUS).Value
             };
 
             return config;
